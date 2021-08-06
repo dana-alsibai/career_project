@@ -1,0 +1,19 @@
+<h1>Current Job Openings</h1>
+<div>
+<button (click) = "buttonPressed(' ')">All Cities</button>
+<button (click) = "buttonPressed('New York City')">New York City</button>
+<button (click) = "buttonPressed('Paris')">Paris</button>
+</div> 
+
+<table> 
+    <tr> 
+        <th>ROLE </th>
+        <th> TYPE</th>
+        <th>LOCATION </th>
+    </tr>
+    <tr *ngFor= "let job of jobsList" >
+        <td><a routerLink="/jobs/{{job.id}}">{{job.title}}</a></td>
+        <td> <a href="#"> {{job.type}}</a></td>
+        <td> <a href="#">{{job.location}}</a></td>
+    </tr>
+</table>
